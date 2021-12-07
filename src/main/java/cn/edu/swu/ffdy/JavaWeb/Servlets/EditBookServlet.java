@@ -29,7 +29,7 @@ public class EditBookServlet extends HttpServlet {
         try {
             List<Book> books = DBUtils.getBooks(sql);
             if (books.size() == 0) {
-                response.sendRedirect("/listBook");
+                response.sendRedirect("/admin/listBook");
                 return;
             }
 

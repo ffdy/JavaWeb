@@ -24,12 +24,27 @@ public class ListBookServlet extends HttpServlet {
 	}
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		String sql = "SELECT * FROM books ORDER BY id DESC";
+		String key = request.getParameter("name");
+
+		String sql;
+		if (key != null && !key.isEmpty()) {
+			sql = "SELECT * FROM `books` WHERE" +
+					" `name` LIKE '%" + key + "%'" +
+					" OR `describe` LIKE '%" + key + "%'" +
+					" OR `author` = '" + key + "'";
+		} else {
+			sql = "SELECT * FROM `books` ORDER BY `id` DESC LIMIT 6";
+		}
+
 		try {			
 			List<Book> books = DBUtils.getBooks(sql);
 			response.setCharacterEncoding("UTF-8");
 			try (Writer writer = response.getWriter()) {
 				String sb = PageUtils.getAdminHeader() +
+						"<center><form action='/admin/listBook' method='GET'>" +
+						"<input type='text' name='name'/>&nbsp;&nbsp;&nbsp;" +
+						"<input type='submit' value='查询'/>" +
+						"</form></center>" +
 						toHtmlTable(books) +
 						PageUtils.getEnd();
 				writer.write(sb);
