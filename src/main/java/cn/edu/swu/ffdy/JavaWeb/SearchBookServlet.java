@@ -9,7 +9,7 @@ import java.io.Writer;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet("/")
+@WebServlet("/index.html")
 public class SearchBookServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1198763442711986380L;

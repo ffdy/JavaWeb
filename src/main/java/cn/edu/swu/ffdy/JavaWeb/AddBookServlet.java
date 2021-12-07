@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/addBook")
+@WebServlet("/admin/addBook")
 public class AddBookServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1139723442711986380L;
@@ -32,7 +32,7 @@ public class AddBookServlet extends HttpServlet {
 		System.out.println(sql);
 		
 		try {
-			cn.edu.swu.ffdy.JavaWeb.DBUtils.insert(sql);
+			DBUtils.insert(sql);
 			response.sendRedirect("./listBook");
 		} catch (SQLException e) {
 			e.printStackTrace();

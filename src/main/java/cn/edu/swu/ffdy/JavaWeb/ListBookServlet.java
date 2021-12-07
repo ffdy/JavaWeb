@@ -10,7 +10,7 @@ import java.io.Writer;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet("/listBook")
+@WebServlet("/admin/listBook")
 public class ListBookServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1198763442711986380L;
@@ -56,10 +56,10 @@ public class ListBookServlet extends HttpServlet {
 			sb.append("<td>").append(book.getPrice()).append("</td>");
 			sb.append("<td>").append(book.getDescribe()).append("</td>");
 			sb.append("<td>").append(
-					String.format("<a href='./editBook?id=%s'>修改</a>", book.getId())
+					String.format("<a href='./admin/editBook?id=%s'>修改</a>", book.getId())
 			).append("</td>");
 			sb.append("<td>").append(
-					String.format("<a href='./deleteBook?id=%s'>删除</a>", book.getId())
+					String.format("<a href='./admin/deleteBook?id=%s'>删除</a>", book.getId())
 			).append("</td>");			
 			sb.append("</tr>");
 		}		

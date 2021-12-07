@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/deleteBook")
+@WebServlet("/admin/deleteBook")
 public class DeleteBookServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1198763442666686380L;
