@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = "/admin/*")
+@WebFilter("/admin/*")
 public class AuthFilter extends HttpFilter {
     public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
         throws IOException, ServletException {
