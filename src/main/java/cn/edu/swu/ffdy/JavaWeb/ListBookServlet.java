@@ -56,10 +56,11 @@ public class ListBookServlet extends HttpServlet {
 			sb.append("<td>").append(book.getPrice()).append("</td>");
 			sb.append("<td>").append(book.getDescribe()).append("</td>");
 			sb.append("<td>").append(
-					String.format("<a href='./admin/editBook?id=%s'>修改</a>", book.getId())
+//					当前已经在/admin路径下
+					String.format("<a href='/admin/editBook?id=%s'>修改</a>", book.getId())
 			).append("</td>");
 			sb.append("<td>").append(
-					String.format("<a href='./admin/deleteBook?id=%s'>删除</a>", book.getId())
+					String.format("<a href='/admin/deleteBook?id=%s'>删除</a>", book.getId())
 			).append("</td>");			
 			sb.append("</tr>");
 		}		

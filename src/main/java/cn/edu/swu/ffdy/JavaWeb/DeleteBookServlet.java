@@ -22,7 +22,7 @@ public class DeleteBookServlet extends HttpServlet {
 		
 		try {
 			cn.edu.swu.ffdy.JavaWeb.DBUtils.delete(sql);
-			response.sendRedirect("./listBook");			
+			response.sendRedirect("/admin/listBook");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

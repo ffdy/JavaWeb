@@ -33,7 +33,7 @@ public class AddBookServlet extends HttpServlet {
 		
 		try {
 			DBUtils.insert(sql);
-			response.sendRedirect("./listBook");
+			response.sendRedirect("/admin/listBook");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

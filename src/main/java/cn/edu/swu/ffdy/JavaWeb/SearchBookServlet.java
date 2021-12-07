@@ -38,7 +38,7 @@ public class SearchBookServlet extends HttpServlet {
             try (Writer writer = response.getWriter()) {
 
                 String sb = PageUtils.getHeader() +
-                        "<center><form action='./index.html' method='GET'>" +
+                        "<center><form action='/index.html' method='GET'>" +
                         "<input type='text' name='name'/>&nbsp;&nbsp;&nbsp;" +
                         "<input type='submit' value='查询'/>" +
                         "</form></center>" +

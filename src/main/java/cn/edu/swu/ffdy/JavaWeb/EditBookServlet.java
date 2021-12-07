@@ -25,7 +25,7 @@ public class EditBookServlet extends HttpServlet {
         try {
             List<Book> books = DBUtils.getBooks(sql);
             if (books.size() == 0) {
-                response.sendRedirect("./listBook");
+                response.sendRedirect("/listBook");
                 return;
             }
 
@@ -49,7 +49,7 @@ public class EditBookServlet extends HttpServlet {
     public String buildBookForm(Book book) {
         String html = String.format("<center>\n" +
             "<br>\n" +
-            "<form action='./updateBook' method='POST''>\n" +
+            "<form action='/admin/updateBook' method='POST''>\n" +
             "<input type='hidden' name='id' value='%s'>" +
             "<table style='background-color:#dddddd;padding:2em'>\n" +
             "\t<tr><td>书 名:</td><td><input type='text' name=name value='%s'></td></tr>\n" +

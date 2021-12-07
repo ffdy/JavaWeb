@@ -22,9 +22,9 @@ public class LoginServlet  extends HttpServlet {
 
         if (user != null && pass != null) {
             if (user.equals("admin") && pass.equals("123456")) {
-                response.sendRedirect("./admin/listBook");
+                response.sendRedirect("/admin/listBook");
             } else {
-                response.sendRedirect("./login.html");
+                response.sendRedirect("/login.html");
             }
         }
     }

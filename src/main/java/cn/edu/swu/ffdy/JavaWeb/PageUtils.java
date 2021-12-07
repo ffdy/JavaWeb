@@ -13,7 +13,7 @@ public class PageUtils {
 			"</head>" +
 			"<body>" +
 			"<div style='text-align:center'><h1>西南大学网上书店</h1></div>" +
-			"<div style='text-align:right;padding-right:3em'><a href='./login.html'>登 录</a></div>" +
+			"<div style='text-align:right;padding-right:3em'><a href='/login.html'>登 录</a></div>" +
 			"</div>";
 	}
 
@@ -29,10 +29,10 @@ public class PageUtils {
 			"<body>" +
 			"<div style='text-align:center;padding:0.7em'><h1>西南大学网上书店</h1></div>" +
 			"<div style='text-align:center;padding:0.7em'>" +
-			"	<span class='menu'><a href='./index.html'>首 页</a></span>" +
-			"	<span class='menu'><a href='./admin/add.html'>添 加</a></span>" +
-			"	<span class='menu'><a href='./admin/listBook'>管理</a></span>" +
-			"	<span class='menu'><a href='./login.html'>登录</a></span>" +
+			"	<span class='menu'><a href='/index.html'>首 页</a></span>" +
+			"	<span class='menu'><a href='/admin/add.html'>添 加</a></span>" +
+			"	<span class='menu'><a href='/admin/listBook'>管理</a></span>" +
+			"	<span class='menu'><a href='/login.html'>登录</a></span>" +
 			"</div>";
 	}
 	

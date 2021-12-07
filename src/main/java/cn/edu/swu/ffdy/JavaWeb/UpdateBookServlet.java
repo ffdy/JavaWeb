@@ -35,7 +35,7 @@ public class UpdateBookServlet extends HttpServlet {
 
         try {
             DBUtils.update(sql);
-            response.sendRedirect("./listBook");
+            response.sendRedirect("/admin/listBook");
         } catch (SQLException e) {
             e.printStackTrace();
         }
