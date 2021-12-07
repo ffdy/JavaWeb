@@ -1,4 +1,6 @@
-package cn.edu.swu.ffdy.JavaWeb;
+package cn.edu.swu.ffdy.JavaWeb.Servlets;
+
+import cn.edu.swu.ffdy.JavaWeb.Utils.DBUtils;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +23,7 @@ public class DeleteBookServlet extends HttpServlet {
 		String sql = "DELETE FROM books WHERE id=" + id;
 		
 		try {
-			cn.edu.swu.ffdy.JavaWeb.DBUtils.delete(sql);
+			DBUtils.delete(sql);
 			response.sendRedirect("/admin/listBook");
 		} catch (SQLException e) {
 			e.printStackTrace();

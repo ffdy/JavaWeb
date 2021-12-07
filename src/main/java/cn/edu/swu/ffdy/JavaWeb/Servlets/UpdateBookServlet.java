@@ -1,4 +1,6 @@
-package cn.edu.swu.ffdy.JavaWeb;
+package cn.edu.swu.ffdy.JavaWeb.Servlets;
+
+import cn.edu.swu.ffdy.JavaWeb.Utils.DBUtils;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

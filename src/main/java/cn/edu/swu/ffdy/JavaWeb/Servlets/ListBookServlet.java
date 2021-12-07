@@ -1,5 +1,9 @@
-package cn.edu.swu.ffdy.JavaWeb;
+package cn.edu.swu.ffdy.JavaWeb.Servlets;
 
+
+import cn.edu.swu.ffdy.JavaWeb.Utils.Book;
+import cn.edu.swu.ffdy.JavaWeb.Utils.DBUtils;
+import cn.edu.swu.ffdy.JavaWeb.Utils.PageUtils;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +26,7 @@ public class ListBookServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String sql = "SELECT * FROM books ORDER BY id DESC";
 		try {			
-			List<Book> books = DBUtils.getBooks(sql);			
+			List<Book> books = DBUtils.getBooks(sql);
 			response.setCharacterEncoding("UTF-8");
 			try (Writer writer = response.getWriter()) {
 				String sb = PageUtils.getAdminHeader() +

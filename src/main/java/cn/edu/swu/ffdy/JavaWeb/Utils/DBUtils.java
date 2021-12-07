@@ -1,4 +1,4 @@
-package cn.edu.swu.ffdy.JavaWeb;
+package cn.edu.swu.ffdy.JavaWeb.Utils;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -49,7 +49,7 @@ public class DBUtils {
 			try (Statement statement = connection.createStatement()) {
 				ResultSet rs = statement.executeQuery(sql);				
 				while (rs.next()) {
-					Book book = new cn.edu.swu.ffdy.JavaWeb.Book();
+					Book book = new Book();
 					book.setId(rs.getInt("id"));
 					book.setName(rs.getString("name"));
 					book.setAuthor(rs.getString("author"));

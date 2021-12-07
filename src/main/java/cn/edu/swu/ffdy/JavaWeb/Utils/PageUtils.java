@@ -1,4 +1,4 @@
-package cn.edu.swu.ffdy.JavaWeb;
+package cn.edu.swu.ffdy.JavaWeb.Utils;
 
 public class PageUtils {
 
