@@ -17,11 +17,19 @@ public class LoginServlet  extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        request.setCharacterEncoding("UTF-8");
         String user = request.getParameter("user");
         String pass = request.getParameter("pass");
+        String code = request.getParameter("code");
 
         HttpSession session = request.getSession(true);
+        String validates = (String) session.getAttribute(SessionContext.LOGIN_VALIDATE_CODE);
+
+        if(validates == null || !validates.equalsIgnoreCase(code)) {
+            response.sendRedirect("/login.html");
+            return;
+        }
+
+        request.setCharacterEncoding("UTF-8");
         if (user != null && pass != null) {
             if (user.equals("admin") && pass.equals("123456")) {
                 session.setAttribute(SessionContext.LOGIN_STATUS, Boolean.TRUE);
