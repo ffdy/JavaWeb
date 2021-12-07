@@ -12,8 +12,6 @@ import java.sql.SQLException;
 @WebServlet("/admin/deleteBook")
 public class DeleteBookServlet extends HttpServlet {
 
-	private static final long serialVersionUID = 1198763442666686380L;
-	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		this.doPost(request, response);
 	}

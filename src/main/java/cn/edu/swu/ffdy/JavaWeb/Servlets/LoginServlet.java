@@ -12,8 +12,6 @@ import java.io.IOException;
 @WebServlet("/login")
 public class LoginServlet  extends HttpServlet {
 
-    private static final long serialVersionUID = 1198763434511986380L;
-
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doPost(request, response);
     }

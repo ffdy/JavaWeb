@@ -12,9 +12,7 @@ import java.sql.SQLException;
 @WebServlet("/admin/addBook")
 public class AddBookServlet extends HttpServlet {
 
-	private static final long serialVersionUID = 1139723442711986380L;
-	
-	private static final String INSERT_TEMPLATE = 
+	private static final String INSERT_TEMPLATE =
 			"INSERT INTO books (`name`, `author`, `price`, `type`, `describe`) " +
 			"VALUES ('%s', '%s', %s, '%s', '%s')";
 	

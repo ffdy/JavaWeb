@@ -17,8 +17,6 @@ import java.util.List;
 @WebServlet("/admin/listBook")
 public class ListBookServlet extends HttpServlet {
 
-	private static final long serialVersionUID = 1198763442711986380L;
-	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		this.doPost(request, response);
 	}

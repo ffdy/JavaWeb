@@ -9,7 +9,6 @@ import java.io.IOException;
 
 @WebServlet("/admin/logout")
 public class LogoutServlet extends HttpServlet {
-    private static final long serialVersionUID = 1198763222511986380L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doPost(request, response);

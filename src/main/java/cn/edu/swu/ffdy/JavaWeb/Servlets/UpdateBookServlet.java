@@ -12,8 +12,6 @@ import java.sql.SQLException;
 @WebServlet("/admin/updateBook")
 public class UpdateBookServlet extends HttpServlet {
 
-    private static final long serialVersionUID = 119833388866686380L;
-
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doPost(request, response);
     }
